@@ -26,5 +26,13 @@ public class Player_Points : MonoBehaviour
             points += 10;
             Debug.Log("Points: " + points);
         }
+
+        // if points hits 50
+        // print out You're the boss!
+
+        if (points == 50)
+        {
+            Debug.Log("You're the boss!");
+        }
     }
 }
