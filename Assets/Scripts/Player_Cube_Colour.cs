@@ -23,7 +23,7 @@ public class Player_Cube_Colour : MonoBehaviour
         {
             score += 10;
         }
-        if (score >= 50)
+        if (score = 50)
         {
             cube.GetComponent<MeshRenderer>().material.color = Color.green;
         }
