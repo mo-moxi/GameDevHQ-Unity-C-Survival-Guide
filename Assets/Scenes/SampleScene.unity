@@ -309,13 +309,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e2166489172acfbb912450207fc28c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 2be703a51f3f21b99a28802db7e5d236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Hobo
-  myAge: 22
-  mySpeed: 15.7
-  myHealth: 10
-  myScore: 10
-  hasAllKeys: 0
-  myAmmo: 50
+  itemName: Sword
+  itemDescription: Blunt as a butter knife!
+  itemIcon: {fileID: 0}
+  attackStrength: 0
