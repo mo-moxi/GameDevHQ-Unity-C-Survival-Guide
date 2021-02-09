@@ -10,7 +10,7 @@ public class Player_Points : MonoBehaviour
     private int points;
 
     // has said message
-
+    [SerializeField]
     private bool _hasSaidMessage;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class Player_Points : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             points += 10;
-            Debug.Log("Points: " + points);
+            //  Debug.Log("Points: " + points);                           
         }
 
         // if points is greater than 50 AND (&&) hasSaidMessage  is false
