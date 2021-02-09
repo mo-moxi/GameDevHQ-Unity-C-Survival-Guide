@@ -14,7 +14,6 @@ public class QuizCalculator : MonoBehaviour
     public float gradeAverage;
     void Start()
     {
-        float average;
         for (int i = 0; i < quiz.Length; i++)
         {
             quiz[i] = Random.Range(0f, 100f);
