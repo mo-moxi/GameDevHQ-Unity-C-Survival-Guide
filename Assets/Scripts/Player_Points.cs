@@ -9,6 +9,9 @@ public class Player_Points : MonoBehaviour
     [SerializeField]
     private int points;
 
+    // has said message
+
+    private bool _hasSaidMessage;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +30,13 @@ public class Player_Points : MonoBehaviour
             Debug.Log("Points: " + points);
         }
 
-        // if points hits 50
-        // print out You're the boss!
+        // if points is greater than 50 AND (&&) hasSaidMessage  is false
+        // print out You're awesome!
 
-        if (points == 50)
+        if (points >= 50 && _hasSaidMessage == false)
         {
-            Debug.Log("You're the boss!");
+            Debug.Log("You're awesome!");
+            _hasSaidMessage = true;
         }
     }
 }
