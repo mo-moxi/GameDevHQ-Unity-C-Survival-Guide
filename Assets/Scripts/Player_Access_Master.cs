@@ -16,14 +16,7 @@ public class Player_Access_Master : MonoBehaviour
 
     void Start()
     {
-        /*
-            var namelength = names.Length - 1;
-            Debug.Log(names[namelength]);
-            var agelength = ages.Length - 1;
-            Debug.Log(ages[agelength]);
-            var carlength = cars.Length - 1;
-            Debug.Log(cars[carlength]);
-        */
+
     }
 
     // Update is called once per frame
@@ -31,8 +24,8 @@ public class Player_Access_Master : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            Debug.Log("Name: " + names[4] + ". Age: " + ages[4] + ". Car model: " + cars[4]);
+            var randomChoice = randomChoice.Range(0, 4);
+            Debug.Log("Name: " + names[randomChoice] + ". Age: " + ages[randomChoice] + ". Car model: " + cars[randomChoice]);
         }
     }
 }
