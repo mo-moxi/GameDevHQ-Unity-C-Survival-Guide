@@ -8,14 +8,24 @@ public class Player_For_Loops : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 100; i++) // counting up print out name
         {
             Debug.Log("My name is " + myName);
         }
-
-        Debug.Log("Loop has finihed");
+        for (int i = 100; i > 0; i--) // counting down even numbers
+        {
+            if (i % 2 == 0)
+                Debug.Log(i);
+            if (i == 76)
+                Debug.Log("i is " + i);
+        }
+        for (int i = 0; i < 100; i++) // counting up odd numbers
+        {
+            if (i % 2 == 1)
+                Debug.Log(i);
+        }
+        Debug.Log("Loops has finihed");
     }
-
     // Update is called once per frame
     void Update()
     {
