@@ -22,7 +22,6 @@ public class Player_For_Loop_Presentation : MonoBehaviour
         {
             apples++;
             yield return new WaitForSeconds(0.5f);
-
         }
     }
 }
