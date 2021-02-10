@@ -13,6 +13,7 @@ public class Player_Access_Master : MonoBehaviour
     public string[] names;
     public int[] ages;
     public string[] cars;
+    public int rasndomChoice;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class Player_Access_Master : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var randomChoice = Random.Range(0, 4);
+            randomChoice = Random.Range(0, 4);
             Debug.Log("Name: " + names[randomChoice] + ". Age: " + ages[randomChoice] + ". Car model: " + cars[randomChoice]);
         }
     }
