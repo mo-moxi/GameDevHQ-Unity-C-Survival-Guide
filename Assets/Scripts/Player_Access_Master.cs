@@ -18,13 +18,12 @@ public class Player_Access_Master : MonoBehaviour
     {
 
     }
-
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var randomChoice = randomChoice.Range(0, 4);
+            var randomChoice = Random.Range(0, 4);
             Debug.Log("Name: " + names[randomChoice] + ". Age: " + ages[randomChoice] + ". Car model: " + cars[randomChoice]);
         }
     }
