@@ -5,6 +5,16 @@ using UnityEngine;
 public class Player_While_Loop : MonoBehaviour
 {
     // Start is called before the first frame update
+    // Warning: always allow the program to breath and always use 
+    // an index incrementor or condition to break the loop.
+
+    // e.g.
+    // while(CONDITION)
+    //{
+    //  -- some code --
+    // change CONDITION -- i++ etc.
+    // (CONDITION can be anything changeable or measurable)
+    //}
     void Start()
     {
         StartCoroutine(LoopRoutine());
