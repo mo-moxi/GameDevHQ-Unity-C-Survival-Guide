@@ -16,10 +16,29 @@ public class Player_Array_Loop : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            for (int i = 0; i < itemID.Length; i++)
+            foreach (var item in itemName)
             {
-                Debug.Log("ID: " + itemID[i] + " " + "Item Name: " + itemName[i]);
+                if (item == "c")
+                    Debug.Log("Item name: " + item);
             }
+            foreach (var ID in itemID)
+            {
+                if (ID == 3)
+                    Debug.Log("Item ID: " + ID);
+            }
+            /*      for (int i = 0; i < itemID.Length; i++)
+                    {
+                        Debug.Log("ID: " + itemID[i] + " " + "Item Name: " + itemName[i]);
+                        if (itemID[i] == 3)
+                        {
+                            Debug.Log("Item name: " + itemName[i]);
+                        }
+                        if (itemName[i] == "e")
+                        {
+                            Debug.Log("Item " + itemName[i] + " exits.");
+                        }
+                    }
+            */
         }
     }
 }
