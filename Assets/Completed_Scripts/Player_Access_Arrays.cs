@@ -13,7 +13,6 @@ public class Player_Access_Arrays : MonoBehaviour
         Debug.Log(ages[2]);
         Debug.Log(items[1]);
     }
-
     // Update is called once per frame
     void Update()
     {
