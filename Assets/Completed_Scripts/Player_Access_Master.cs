@@ -10,6 +10,8 @@ public class Player_Access_Master : MonoBehaviour
     //Create an array of 5 card models and associate them with 
     //each name and print out the last name's favourite car.
 
+    // Randomly choose a name - part 2
+
     public string[] names;
     public int[] ages;
     public string[] cars;
@@ -24,7 +26,8 @@ public class Player_Access_Master : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            randomChoice = Random.Range(0, 4);
+            randomChoice = Random.Range(0, names.Length);
+            Debug.Log(randomChoice);
             Debug.Log("Name: " + names[randomChoice] + ". Age: " + ages[randomChoice] + ". Car model: " + cars[randomChoice]);
         }
     }
