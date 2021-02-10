@@ -13,7 +13,7 @@ public class Player_Access_Master : MonoBehaviour
     public string[] names;
     public int[] ages;
     public string[] cars;
-    public int rasndomChoice;
+    public int randomChoice;
 
     void Start()
     {
