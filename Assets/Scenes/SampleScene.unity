@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194230}
   - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
@@ -309,19 +310,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77027b3cf492ab34a9599a4c05e6669f, type: 3}
+  m_Script: {fileID: 11500000, guid: 729e08999fb5e7a42906c1a61dc025f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names:
-  - Mike
-  - Simon
-  - John
-  - Steve
-  - Mary
-  ages: 150000002b000000150000002d00000025000000
-  cars:
-  - Ford
-  - Fiat
-  - Tesla
-  - Jaguar
-  - Toyota
+  myItems:
+  - itemID: 0
+    name: null
+    description: null
+  - itemID: 1
+    name: Sword
+    description: Sharp
+  - itemID: 2
+    name: Bread
+    description: Tasty
+  - itemID: 3
+    name: Cape
+    description: Warm
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729e08999fb5e7a42906c1a61dc025f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myItems: []
