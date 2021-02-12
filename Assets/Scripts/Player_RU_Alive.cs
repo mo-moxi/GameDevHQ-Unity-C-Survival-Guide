@@ -16,7 +16,7 @@ public class Player_RU_Alive : MonoBehaviour
     {
         health = Random.Range(0, 20);
     }
-    // Update is called once per frame
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) && IsDead() == false)
