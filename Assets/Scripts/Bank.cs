@@ -5,20 +5,20 @@ using UnityEngine;
 [System.Serializable]
 public class Bank
 {
-    public string branchName;
-    public string location;
-    public string cashInVault;
+    protected string branchName;
+    protected string location;
+    protected string cashInVault;
 
-    public void CheckBalance()
+    protected void CheckBalance()
     {
         Debug.Log("Checking balance: " + branchName);
     }
 
-    public void Withdraw()
+    protected void Withdraw()
     {
         Debug.Log("Withdrawling from: " + branchName);
     }
-    public void Deposit()
+    protected void Deposit()
     {
         Debug.Log("Depositing to: " + branchName);
     }

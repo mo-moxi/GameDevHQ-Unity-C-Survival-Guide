@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class CreditUnion : MonoBehaviour
 {
-public CreditProcessing details;
+public CreditProcessing creditDetails;
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class CreditProcessing : Bank
 {
-    public int availableCash;
+    protected int availableCash;
 
     public void ApproveLending()
     {
