@@ -12,10 +12,11 @@ public class Item
     public string description;
     public Sprite icon;
     
-    public Item(string name, int id, string description)
+/*    public Item(string name, int id, string description)
     {
         this.name = name;
         this.id = id;
         this.description = description;
     }
+*/
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemDataBase : MonoBehaviour
 {
     public Item[] items;
+    public Weapon sword = new Weapon();
+    public Consumable bread = new Consumable();
 
     void Start()
     {
