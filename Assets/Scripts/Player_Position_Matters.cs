@@ -20,8 +20,8 @@ public class Player_Position_Matters : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))         // change position when space key is pressed    
         {
-            _randomIndex = SetRandom();
-            transform.position = ChangePositions();
+            _randomIndex = SetRandom();             // select index value
+            transform.position = ChangePositions(); // position GameObject at index position
         }
     }
     public Vector3[] SetPositions()                 // populate the positions array
