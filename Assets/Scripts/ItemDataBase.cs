@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class ItemDataBase : MonoBehaviour
 {
-    Item sword;
-    Item hammer;
-    Item bread;
-    
+    public Item[] items;
+
     void Start()
     {
-        sword = new Item("Bob", 1, "This is a mighty sword");
+        foreach(var item in items)
+            {
+                Debug.Log(item.name);
+            }
 
-        hammer = new Item("Hammer", 2, "This is a hammer");
-
-        bread = CreateItem("Bread", 3, "The is bread");
-
-        Debug.Log(bread.name);
-
+        for(int i = 0; i <items.Length; i++)
+            {
+                Debug.Log(items[i].description);
+            }
+            
+        Debug.Log(items[1].id);
     }
-
 
     void Update()
     {
         
     }
-    private Item CreateItem(string name, int id, string description)
-    {
-        Item item = new Item(name, id, description);
-        return item;
-    }
+
 }
