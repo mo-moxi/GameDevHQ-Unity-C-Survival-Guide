@@ -5,31 +5,43 @@ using UnityEngine;
 public class Player_Magic_Trick : MonoBehaviour
 {
     private bool isKeyPressed;
+    private MeshRenderer _renderer;
+    private WaitForSeconds _waitTimeHide = new WaitForSeconds(5f);
+    private WaitForSeconds _waitTimeColor = new WaitForSeconds(3f);
+    
     void Start()
     {
-        ChangeColor();
+        _renderer = GetComponent<MeshRenderer>();
+        StartCoroutine(ChangeColorRoutine());                                  // Change object colour every 3 seconds
     }
 
-    
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.I) && isKeyPressed == false)
         {
-            ChangeColor();
-            StartCoroutine(HideCube());
+            isKeyPressed = true;
+            _renderer.enabled = false;   // disable MashRenderer
+            StartCoroutine(HideRoutine());
         }
     }
-    IEnumerator HideCube()
+    IEnumerator HideRoutine()
     {
-        isKeyPressed = true;
-        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
-        yield return new WaitForSeconds(5f);
-        this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        yield return _waitTimeHide;
+        _renderer.enabled = true;    // enable MashRenderer
         isKeyPressed = false;
     }
-    public void ChangeColor()
+    IEnumerator ChangeColorRoutine()
     {
-        this.gameObject.GetComponent<MeshRenderer>().material.color = new Color(Random.value, Random.value, Random.value, 1.0f );
+        while(true)
+        {
+        yield return _waitTimeColor;
+        _renderer.material.color = NewColor();
+        }
+    }
+    Color NewColor()
+    {
+        var color = new Color(Random.value, Random.value, Random.value);
+        return color;
     }
 
 
