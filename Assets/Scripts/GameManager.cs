@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private bool _isGameOver;
+    public bool AutoSet { get; private set; } // can also use protected 
 
     public bool IsGameOver
     {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         IsGameOver = false;
+        AutoSet = IsGameOver;
+        Debug.Log(AutoSet);
     }
     
     private void Update()
