@@ -5,38 +5,38 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool isGameOver;
+    private bool _isGameOver;
 
     public bool IsGameOver
     {
-        get { return isGameOver; }
+        get { return _isGameOver; }
         set
         {
             if (value == true)
             {
                 Debug.Log("Oh no! The game is over");
             }
-            isGameOver = value;
+            _isGameOver = value;
         }
     }
 
-    void Start()
+    private void Start()
     {
-        isGameOver = false;
+        IsGameOver = false;
     }
     
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
            // Debug.Log("Space pressed");
-            isGameOver = true;
+            IsGameOver = true;
         }
     }
 
     public void GameOver()
     {
-        isGameOver = true;
+        IsGameOver = true;
         // Call the UI Manager and enable the game over screen
     }
 }
