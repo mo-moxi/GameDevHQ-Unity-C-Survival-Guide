@@ -2,11 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class AccessTest
+{
+    GameManager gm = new GameManager();
 
+    public void Test()
+    {
+        gm.Speed = 40f;
+    }
+}
 public class GameManager : MonoBehaviour
 {
     private bool _isGameOver;
     public bool AutoSet { get; private set; } // can also use protected 
+
+    private float _speed;
+
+    public float Speed
+    {
+        get => _speed;
+        set => _speed = value;
+    }
 
     public bool IsGameOver
     {
@@ -25,7 +41,8 @@ public class GameManager : MonoBehaviour
     {
         IsGameOver = false;
         AutoSet = IsGameOver;
-        Debug.Log(AutoSet);
+        Speed = 10;
+        Debug.Log(_speed);
     }
     
     private void Update()
