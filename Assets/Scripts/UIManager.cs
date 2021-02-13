@@ -7,16 +7,6 @@ public class UIManager : MonoBehaviour
 {
 public Text activeEnemiesText;
 
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
     public void UpdateEnemyCount()
     {
         activeEnemiesText.text = "Active Enemies: " + SpawnManager.enemyCount;
